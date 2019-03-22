@@ -8,10 +8,29 @@
     margin-bottom: 2.5rem;
     .flex(@main-axis: space-between);
 
+    @media @mobile {
+      margin: 0 auto;
+      .flex(@flow: column);
+    }
+
+    h1 {
+      @media @mobile {
+        font-size: 3rem;
+        margin: 1.8rem 0 1.6rem 0;
+      }
+    }
+
     div {
       width: 320px;
       padding-right: 30px;
       .flex(@main-axis: space-between);
+
+      @media @mobile {
+        padding: 0;
+        width: 90%;
+        .flex(@main-axis: space-around);
+        margin-bottom: .9rem;
+      }
 
       a {
         font-size: 1.6rem;
