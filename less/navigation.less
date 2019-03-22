@@ -1,1 +1,29 @@
 // Navigation Styles here
+.site-nav {
+  width: 100%;
+  border-bottom: 2px dashed @navigation-border;
+
+  .container{
+    margin: 2.3rem auto;
+    margin-bottom: 2.5rem;
+    .flex(@main-axis: space-between);
+
+    div {
+      width: 320px;
+      padding-right: 30px;
+      .flex(@main-axis: space-between);
+
+      a {
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: black;
+        transition:
+          color .25s ease-in-out;
+
+        &:hover {
+          color: darkgray;
+        }
+      }
+    }
+  }
+}
