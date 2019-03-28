@@ -1,1 +1,24 @@
 // Mixins in here
+.preset-btn (@bg: @button-blue; @text: @white) {
+  width: 83%;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 4.5rem;
+  border-radius: 1.5rem;
+  background-color: darken(@bg, 20%, relative);
+  color: @text;
+  transition:
+    background-color .25s ease-in-out;
+
+  &:hover {
+    background-color: @eastern-blue;
+  }
+}
+
+.flex (@main-axis: center; @cross-axis: center; @flow: row; @wrap: wrap;) {
+  display: flex;
+  flex-flow: @flow @wrap;
+  justify-content: @main-axis;
+  align-content: @cross-axis;
+  align-items: @cross-axis;
+}
